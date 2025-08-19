@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+
+    <title>Frontend Mentor | Interactive card details form</title>
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="./bootstrap/css/bootstrap.min.css">
+
+</head>
+<body>
+    <img src="./images/bg-main-desktop.png" alt="" class="bg-img-1">
+    <img src="./images/bg-card-front.png" alt="" class="card-front">
+    <img src="./images/bg-card-back.png" alt="" class="card-back">
+
+    <div class="container-1">
+      <form class="needs-validation" novalidate>
+        <div class="holder-names">
+        <label for="name" class="form-label">CARDHOLDER NAME</label>
+        <input type="text" placeholder="e.g. Jane Appleseed" id="name" class="form-control" required>
+        <div class="invalid-feedback">This Field Required</div>
+        
+         <label for="card-number">CARD NUMBER</label>
+        <input type="text" placeholder="e.g. 1234 5678 9123 0000" maxlength="19" id="card-number" class="input form-control"pattern="[A-Za-z0-9]+" title="Only alphabets and numbers are allowed" required >
+
+        <div class="invalid-feedback">This Field Required</div>
+        </div>
+        <div class="expiray">
+          <div class="expiray-1 d-inline">
+          <label for="card-date">EXP.DATE(MM/YY)</label>
+          <input type="text" placeholder="MM" id="card-date" class="input form-control d-inline" maxlength="2" required>
+          <input type="text" placeholder="YY" id="card-year" class="input form-control d-inline" maxlength="2" required>
+            <div class="invalid-feedback">This Field Required</div>
+          </div>
+        
+          <div class="expiray-2">
+           <label for="card-cvc">CVC</label>
+           <input type="text" id="card-cvc" class="input form-control" placeholder="e.g. 123" maxlength="3" required>
+           
+           </div>
+        </div>
+       
+        <button type="submit" id="confirm-btn">Confirm</button>
+      </form>
+    </div>
+
+    <div class="front-cards">
+      <img src="./images/card-logo.svg" alt="">
+      <h3 class="cards-num">9591 6489 6389 101E</h3>
+      <div class="details">
+        <p class="show-name">Jane Appleseed</p>
+        <p class="show-date"><span class="month">00</span> / <span class="year">00</span></p>
+      </div>
+    </div>
+
+    <div class="back-cards">
+     <div class="cvv-detail">
+      <p class="show-cvv">000</p>
+     </div>
+    </div>
+
+    <div class="container-2">
+      <img src="./images/icon-complete.svg" alt="">
+      <h2>THANK YOU!</h2>
+      <P>We've added your card details</P>
+      <button class="continue-btn">Continue</button>
+    </div>
+ 
+</body>
+<script src="script.js"></script>
+</html>
